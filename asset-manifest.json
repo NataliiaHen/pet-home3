@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "./static/css/main.1ad2bd4e.chunk.css",
+    "main.js": "./static/js/main.c5593d4b.chunk.js",
+    "main.js.map": "./static/js/main.c5593d4b.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.e744f501.js",
+    "runtime-main.js.map": "./static/js/runtime-main.e744f501.js.map",
+    "static/css/2.e91f9a52.chunk.css": "./static/css/2.e91f9a52.chunk.css",
+    "static/js/2.566db4fe.chunk.js": "./static/js/2.566db4fe.chunk.js",
+    "static/js/2.566db4fe.chunk.js.map": "./static/js/2.566db4fe.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/2.e91f9a52.chunk.css.map": "./static/css/2.e91f9a52.chunk.css.map",
+    "static/css/main.1ad2bd4e.chunk.css.map": "./static/css/main.1ad2bd4e.chunk.css.map",
+    "static/js/2.566db4fe.chunk.js.LICENSE.txt": "./static/js/2.566db4fe.chunk.js.LICENSE.txt",
+    "static/media/Baner.scss": "./static/media/baner-bg.a12f8c3b.png",
+    "static/media/Services.scss": "./static/media/elipse-bg-mobile.b4c7734a.png",
+    "static/media/GivePet.scss": "./static/media/elipse-bg.ed049ea7.png",
+    "static/media/NoResults.scss": "./static/media/paws2.bec3580c.png",
+    "static/media/QuestionForm.scss": "./static/media/question-bg.6c00452a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e744f501.js",
+    "static/css/2.e91f9a52.chunk.css",
+    "static/js/2.566db4fe.chunk.js",
+    "static/css/main.1ad2bd4e.chunk.css",
+    "static/js/main.c5593d4b.chunk.js"
+  ]
+}
