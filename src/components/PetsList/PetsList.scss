@@ -1,0 +1,23 @@
+@import "../../styles/style_utils";
+
+.pets-list {
+  @include page-grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  @include onTablet {
+    grid-template-columns: repeat(2, 1fr);
+
+    &--favorites {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include onDesktop {
+    grid-template-columns: repeat(3, 1fr);
+
+    &--favorites {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

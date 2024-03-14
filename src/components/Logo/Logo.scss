@@ -1,0 +1,10 @@
+@import "../../styles/style_utils";
+
+.logo {
+  height: 25px;
+  @include scale;
+  
+  & svg {
+    margin: 0 auto;
+  }
+}

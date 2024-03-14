@@ -1,0 +1,29 @@
+@import "../../styles/style_utils";
+
+.pets-carousel {
+  &__top {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    @include onTablet {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include onLaptop {
+      margin-bottom: 2rem;
+    }
+
+    @include onDesktop {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__count {
+    margin-top: 0.5rem;
+
+    @include onTablet {
+      margin-top: 0;
+    }
+  }
+}

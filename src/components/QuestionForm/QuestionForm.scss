@@ -1,0 +1,101 @@
+@import "../../styles/style_utils";
+
+.question {
+  width: 100%;
+
+  @include onLaptop {
+    background-image: url(../../img/question-bg.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__box {
+    width: 100%;
+
+    @include onLaptop {
+      @include page-grid;
+    }
+  }
+
+  &__top-box {
+    display: flex;
+    flex-direction: column;
+
+    @include onLaptop {
+      grid-column: 2/-2;
+    }
+
+    @include onDesktop {
+      grid-column: 3/-3;
+    }
+  }
+  
+  &__form-box {
+    justify-self: center;
+    
+    @include onLaptop {
+      grid-column: 2/-2;
+      width: 100%;
+      max-width: 648px;
+    }
+    
+    @include onDesktop {
+      grid-column: 3/-3;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    text-align: center;
+
+    @include onLaptop {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__sub-title {
+    text-align: center;
+    color: $primary-800;
+    margin-bottom: 1.5rem;
+
+    @include onLaptop {
+      margin-bottom: 3rem;
+      font-size: 1rem;
+    }
+  }
+
+  &__field {
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+
+      @include onLaptop {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 2rem;
+  
+      @include onLaptop {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__form {
+    @extend %main-text;
+
+    @include onLaptop {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__button {
+    @include primary-button;
+  }
+}

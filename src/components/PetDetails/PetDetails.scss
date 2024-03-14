@@ -1,0 +1,246 @@
+@import "../../styles/style_utils";
+
+.pet-details {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+
+  @include onLaptop {
+    gap: 105px;
+  }
+
+  @include onDesktop {
+    gap: 150px;
+  }
+
+  &__grid {
+    @include page-grid;
+    justify-items: center;
+    align-items: center;
+    row-gap: 24px;
+  }
+
+  &__photos {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    grid-column: 1/-1;
+    max-width: 648px;
+    gap: 8px;
+
+    @include onTablet {
+      row-gap: 15px;
+    }
+
+    @include onLaptop {
+      grid-column: span 3;
+      row-gap: 20px;
+    }
+
+    @include onDesktop {
+      grid-column: span 4;
+      row-gap: 24px;
+    }
+  }
+
+  &__small-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+
+    @include onLaptop {
+      grid-column: span 2;
+      gap: 20px;
+    }
+
+    @include onDesktop {
+      gap: 24px;
+    }
+  }
+
+  &__photo-container {
+    border: 1px solid $primary-400;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include scale;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__big-photo-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @include onLaptop {
+      max-height: 464px;
+    }
+
+    @include onDesktop {
+      max-height: 648px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__small-photo-container {
+    grid-column: span 1;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: none;
+    transform: scale(1);
+    transition: all 300ms;
+
+    @include onLaptop {
+      &:hover {
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__photo-slide-btns {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+
+  &__button-move {
+    @include circle-button(32px);
+  }
+
+  &__info {
+    max-width: 648px;
+    width: 100%;
+    grid-column: 1/-1;
+
+    @include onLaptop {
+      grid-column: span 3;
+      align-self: start;
+    }
+
+    @include onDesktop {
+      grid-column: span 4;
+    }
+  }
+
+  &__name {
+    margin-bottom: 24px;
+
+    @include onLaptop {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__info-list {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 12px;
+    }
+
+    @include onLaptop {
+      column-gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    @include onDesktop {
+      column-gap: 24px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include onTablet {
+      grid-column: span 1;
+
+      &--big {
+        grid-column: span 2;
+      }
+    }
+
+    @include onLaptop {
+      grid-column: span 2;
+    }
+
+    &-title {
+      @extend %detail-title;
+    }
+
+    &-text {
+      @extend %detail-text;
+      color: $primary-1000;
+    }
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  &__button {
+    @include primary-button;
+    width: 100%;
+  }
+
+  &__field-label {
+    @extend %main-text;
+    padding-left: 1rem;
+    margin-bottom: 5rem;
+    font-weight: 500;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 0.5rem;
+    color: $primary-1200;
+
+    @include onLaptop {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__error {
+    display: flex;
+    flex-grow: 2;
+    flex-basis: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+
+    &-description {
+      color: $primary-1000;
+      text-align: center;
+    }
+  }
+}

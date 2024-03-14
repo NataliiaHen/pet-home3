@@ -1,0 +1,115 @@
+@import "../../styles/style_utils";
+
+.pet-card {
+  flex-basis: 288px;
+  flex-grow: 1;
+  grid-column: span 1;
+  border: 1px solid transparent;
+  box-shadow: transparent;
+  background-color: #fff;
+  border-radius: 5%;
+  transition: all 300ms;
+
+  @include onLaptop {
+    &:hover {
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+      .pet-card__name {
+        color: $blue-500;
+      }
+    }
+  }
+
+  &__name {
+    @extend %large-text;
+    margin-bottom: 0.75rem;
+
+    @include onLaptop {
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+    }
+  }
+
+  &__img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 288px;
+    border-radius: 5%;
+    overflow: hidden;
+
+    @include onLaptop {
+      height: 310px;
+    }
+  }
+
+  &__link-img {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__img {
+    display: block;
+
+    height: 100%;
+    max-width: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__fav-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    height: 40px;
+    width: 40px;
+  }
+
+  &__detail {
+    padding: 1.5rem 1rem;
+  }
+
+  &__info-block {
+    margin-bottom: 1.5rem;
+  }
+
+  &__info {
+    @extend %small-text;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &-text {
+      @extend %secondary-text;
+      color: $primary-1000;
+
+      @include onLaptop {
+        font-size: 1.25rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include square(24px);
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+
+    & button {
+      width: 100%;
+    }
+  }
+}
